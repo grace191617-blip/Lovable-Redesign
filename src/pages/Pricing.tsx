@@ -162,24 +162,24 @@ const Pricing = () => {
 
       {/* Tabs */}
       <section className="section-padding bg-background">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-4xl">
           <Tabs defaultValue="business" className="w-full">
-            <TabsList className="w-full flex flex-wrap h-auto gap-1 bg-muted/50 p-1.5 rounded-lg">
-              <TabsTrigger value="business" className="flex-1 min-w-[140px] text-xs sm:text-sm">Business Services</TabsTrigger>
-              <TabsTrigger value="private" className="flex-1 min-w-[140px] text-xs sm:text-sm">Private Client</TabsTrigger>
-              <TabsTrigger value="founder" className="flex-1 min-w-[140px] text-xs sm:text-sm">Founder Advisory</TabsTrigger>
-              <TabsTrigger value="hourly" className="flex-1 min-w-[140px] text-xs sm:text-sm">Hourly &amp; Ad Hoc</TabsTrigger>
+            <TabsList className="w-full flex flex-wrap h-auto gap-1 bg-transparent p-0 mb-8">
+              <TabsTrigger value="business" className="text-muted-foreground data-[state=active]:text-foreground data-[state=active]:border-b-2 data-[state=active]:border-accent rounded-none bg-transparent">Business Services</TabsTrigger>
+              <TabsTrigger value="private" className="text-muted-foreground data-[state=active]:text-foreground data-[state=active]:border-b-2 data-[state=active]:border-accent rounded-none bg-transparent">Private Client</TabsTrigger>
+              <TabsTrigger value="founder" className="text-muted-foreground data-[state=active]:text-foreground data-[state=active]:border-b-2 data-[state=active]:border-accent rounded-none bg-transparent">Founder Advisory</TabsTrigger>
+              <TabsTrigger value="hourly" className="text-muted-foreground data-[state=active]:text-foreground data-[state=active]:border-b-2 data-[state=active]:border-accent rounded-none bg-transparent">Hourly &amp; Ad Hoc</TabsTrigger>
             </TabsList>
 
             {/* ── Business Services ── */}
-            <TabsContent value="business" className="mt-8">
+            <TabsContent value="business" className="mt-0">
               <h2 className="heading-section mb-2">Business Services</h2>
               <p className="body-large mb-6">Core Engagement Levels</p>
 
               <Accordion type="multiple" className="space-y-3">
-                <AccordionItem value="comparison" className="border rounded-lg px-4">
-                  <AccordionTrigger className="text-base font-semibold">Engagement Comparison</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="comparison" className="border rounded-lg px-6 py-0">
+                  <AccordionTrigger className="text-base font-semibold py-4">Engagement Comparison</AccordionTrigger>
+                  <AccordionContent className="pb-4">
                     <ResponsiveTable headers={businessHeaders} rows={businessRows} />
                     <p className="mt-6 text-sm text-muted-foreground">
                       Not sure which level fits? Most clients start with a conversation.
@@ -188,9 +188,9 @@ const Pricing = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="formation" className="border rounded-lg px-4">
-                  <AccordionTrigger className="text-base font-semibold">Business Formation</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="formation" className="border rounded-lg px-6 py-0">
+                  <AccordionTrigger className="text-base font-semibold py-4">Business Formation</AccordionTrigger>
+                  <AccordionContent className="pb-4">
                     <SimpleTable
                       rows={[
                         ["Articles of Incorporation / Organization / Dissolution", "$750 + state filing fee"],
@@ -210,9 +210,9 @@ const Pricing = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="accounting" className="border rounded-lg px-4">
-                  <AccordionTrigger className="text-base font-semibold">Accounting &amp; Sales Tax</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="accounting" className="border rounded-lg px-6 py-0">
+                  <AccordionTrigger className="text-base font-semibold py-4">Accounting &amp; Sales Tax</AccordionTrigger>
+                  <AccordionContent className="pb-4">
                     <ResponsiveTable
                       headers={["Feature", "Starter", "Growth", "Multi-Entity (Complex)"]}
                       rows={[
@@ -225,9 +225,9 @@ const Pricing = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="payroll" className="border rounded-lg px-4">
-                  <AccordionTrigger className="text-base font-semibold">Payroll Fees</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="payroll" className="border rounded-lg px-6 py-0">
+                  <AccordionTrigger className="text-base font-semibold py-4">Payroll Fees</AccordionTrigger>
+                  <AccordionContent className="pb-4">
                     <SimpleTable
                       rows={[
                         ["Payroll Accounts Setup, Transfer, Closing", "$500–$650 depending on state"],
@@ -250,16 +250,16 @@ const Pricing = () => {
               <p className="body-large mb-6">High-Income · Active Traders · Real Estate Investors</p>
 
               <Accordion type="multiple" className="space-y-3">
-                <AccordionItem value="comparison" className="border rounded-lg px-4">
-                  <AccordionTrigger className="text-base font-semibold">Engagement Comparison</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="comparison" className="border rounded-lg px-6 py-0">
+                  <AccordionTrigger className="text-base font-semibold py-4">Engagement Comparison</AccordionTrigger>
+                  <AccordionContent className="pb-4">
                     <ResponsiveTable headers={privateHeaders} rows={privateRows} />
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="rental" className="border rounded-lg px-4">
-                  <AccordionTrigger className="text-base font-semibold">Rental Property Module</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="rental" className="border rounded-lg px-6 py-0">
+                  <AccordionTrigger className="text-base font-semibold py-4">Rental Property Module</AccordionTrigger>
+                  <AccordionContent className="pb-4">
                     <SimpleTable
                       rows={[
                         ["Clean Books", "$250 / property"],
@@ -270,9 +270,9 @@ const Pricing = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="k1" className="border rounded-lg px-4">
-                  <AccordionTrigger className="text-base font-semibold">K-1s</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="k1" className="border rounded-lg px-6 py-0">
+                  <AccordionTrigger className="text-base font-semibold py-4">K-1s</AccordionTrigger>
+                  <AccordionContent className="pb-4">
                     <SimpleTable
                       rows={[
                         ["1–3", "Included"],
@@ -283,9 +283,9 @@ const Pricing = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="trading" className="border rounded-lg px-4">
-                  <AccordionTrigger className="text-base font-semibold">Trading Activity</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="trading" className="border rounded-lg px-6 py-0">
+                  <AccordionTrigger className="text-base font-semibold py-4">Trading Activity</AccordionTrigger>
+                  <AccordionContent className="pb-4">
                     <SimpleTable
                       rows={[
                         ["1–2 brokerage accounts", "Included"],
@@ -314,9 +314,9 @@ const Pricing = () => {
               </p>
 
               <Accordion type="multiple" className="space-y-3">
-                <AccordionItem value="qualification" className="border rounded-lg px-4">
-                  <AccordionTrigger className="text-base font-semibold">Qualification Criteria</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="qualification" className="border rounded-lg px-6 py-0">
+                  <AccordionTrigger className="text-base font-semibold py-4">Qualification Criteria</AccordionTrigger>
+                  <AccordionContent className="pb-4">
                     <p className="text-sm text-muted-foreground mb-4">
                       This engagement is designed for individuals whose compensation, equity structure,
                       liquidity decisions, and ownership strategy materially impact long-term wealth
@@ -339,9 +339,9 @@ const Pricing = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="includes" className="border rounded-lg px-4">
-                  <AccordionTrigger className="text-base font-semibold">Advisory Includes</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="includes" className="border rounded-lg px-6 py-0">
+                  <AccordionTrigger className="text-base font-semibold py-4">Advisory Includes</AccordionTrigger>
+                  <AccordionContent className="pb-4">
                     <ul className="space-y-2 text-sm">
                       {[
                         "Founder compensation architecture (salary vs distributions vs equity)",
@@ -379,9 +379,9 @@ const Pricing = () => {
               <h2 className="heading-section mb-6">Hourly &amp; Ad Hoc</h2>
 
               <Accordion type="single" collapsible defaultValue="rates" className="space-y-3">
-                <AccordionItem value="rates" className="border rounded-lg px-4">
-                  <AccordionTrigger className="text-base font-semibold">Rate Schedule</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="rates" className="border rounded-lg px-6 py-0">
+                  <AccordionTrigger className="text-base font-semibold py-4">Rate Schedule</AccordionTrigger>
+                  <AccordionContent className="pb-4">
                     <SimpleTable
                       rows={[
                         ["Accounting Setup or Transfer (Fractional Controller)", "Varies"],
